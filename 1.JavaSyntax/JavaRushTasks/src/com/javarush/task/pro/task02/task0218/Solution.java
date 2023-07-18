@@ -10,7 +10,7 @@ public class Solution {
         int num2 = scanner.nextInt();
         int num3 = scanner.nextInt();
 
-        System.out.println(num1 * num2 * scanner3);
+        System.out.println(num1 * num2 * num3);
 
     }
 }
