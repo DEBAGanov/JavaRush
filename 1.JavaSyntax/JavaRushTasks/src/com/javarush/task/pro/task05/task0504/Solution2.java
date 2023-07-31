@@ -15,8 +15,9 @@ public class Solution2 {
 
         System.arraycopy(secondArray, 0, resultArray, firstArray.length, secondArray.length);
 
-        for (int number : resultArray) {
-            System.out.print(number + ", ");
-        }
+        // for (int number : resultArray) {
+        //     System.out.print(number + ", ");
+        // }
+        System.out.println(Arrays.toString(resultArray));
     }
 }
