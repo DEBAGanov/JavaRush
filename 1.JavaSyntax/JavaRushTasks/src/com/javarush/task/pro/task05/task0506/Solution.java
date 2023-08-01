@@ -14,6 +14,6 @@ public class Solution {
         System.out.println(Arrays.toString(array));
         Arrays.sort(array);
         System.out.println("отсортированный массив чисел: " +Arrays.toString(array));
-        System.out.println("минимальное число: "+array[0]);
+        System.out.println("минимальное число: "+ array[0]);
     }
 }
