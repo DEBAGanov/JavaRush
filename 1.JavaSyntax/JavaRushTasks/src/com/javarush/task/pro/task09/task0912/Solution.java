@@ -1,7 +1,5 @@
 package com.javarush.task.pro.task09.task0912;
 
-
-
 public class Solution {
     public static void main(String[] args) {
         String[] urls = {"https://javarush.ru", "https://google.com", "http://wikipedia.org", "facebook.com", "https://instagram", "codegym.cc"};
