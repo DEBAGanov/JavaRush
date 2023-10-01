@@ -5,18 +5,18 @@ public class Friend {
     int age;
     char sex;
 
-    public Friend(String name, int age, char sex) {
+    public initialize(String name, int age, char sex) {
         this.name = name;
         this.age = age;
         this.sex = sex;
     }
 
-    public Friend(String name, int age) {
+    public initialize(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    public Friend(String name) {
+    public initialize(String name) {
         this.name = name;
     }
 
