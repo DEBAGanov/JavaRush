@@ -4,7 +4,7 @@ package com.javarush.task.task07.task0704;
 import java.util.Scanner;
 
 public abstract class Solution {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         int arr[] = new int[3];
         System.out.println("Введите 10 чисел: ");
         Scanner scanner = new Scanner(System.in);
