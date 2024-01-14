@@ -7,12 +7,12 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Solution {
-    public static void main(String[] args) {
-        ArrayList<String> words =new ArrayList<>();
+    public static void main(String[] args) throws Exception {
+        ArrayList<String> words = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите 5 слов: ");
-        for (int i=0; i<=5;i++){
+        for (int i = 0; i < 5; i++) {
             words.add(scanner.nextLine());
         }
 
@@ -20,11 +20,9 @@ public class Solution {
         Collections.reverse(words);
         System.out.println("Оставшиеся элементы в обратном порядке");
 
-        for (int i=0; i<=5;i++){
-            System.out.println(words);
+        for (String word : words) {
+            System.out.println(word);
         }
-
-
 
     }
 }
