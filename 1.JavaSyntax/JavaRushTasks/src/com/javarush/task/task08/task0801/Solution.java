@@ -17,6 +17,7 @@ public class Solution {
         plants.add("ирис");
         plants.add("картофель");
         plants.add("картофель");
+        plants.add("");
 
         for (String plant : plants) {
             System.out.println(plant);
