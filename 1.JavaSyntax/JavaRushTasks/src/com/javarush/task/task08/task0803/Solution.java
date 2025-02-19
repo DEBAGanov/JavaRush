@@ -6,24 +6,31 @@ import java.util.Map;
 public class Solution {
 
     public static void main(String[] args) {
-        HashMap<String, Cat> cats = new HashMap<>();
-        cats.put("Барсик", new Cat("Барсик"));
-        cats.put("Мурзик", new Cat("Мурзик"));
-        cats.put("Пушок", new Cat("Пушок"));
-        cats.put("Дымка", new Cat("Дымка"));
-        cats.put("Кузя", new Cat("Кузя"));
-        cats.put("Том", new Cat("Том"));
-        cats.put("Джери", new Cat("Джери"));
-        cats.put("Котя", new Cat("Котя"));
-        cats.put("Леопольд", new Cat("Леопольд"));
-        cats.put("Мурка", new Cat("Мурка"));
 
-        for (Map.Entry<String, Cat> cat : cats.entrySet()) {
+        HashMap<String, Cat> catsMap = new HashMap<>();
+        addCatsToMap(catsMap);
+        printCats(catsMap);
+    }
+
+    public static void addCatsToMap(HashMap<String, Cat> map) {
+        map.put("Барсик", new Cat("Барсик"));
+        map.put("Мурзик", new Cat("Мурзик"));
+        map.put("Пушок", new Cat("Пушок"));
+        map.put("Дымка", new Cat("Дымка"));
+        map.put("Кузя", new Cat("Кузя"));
+        map.put("Том", new Cat("Том"));
+        map.put("Джери", new Cat("Джери"));
+        map.put("Котя", new Cat("Котя"));
+        map.put("Леопольд", new Cat("Леопольд"));
+        map.put("Мурка", new Cat("Мурка"));
+    }
+
+    public static void printCats(HashMap<String, Cat> map) {
+        for (Map.Entry<String, Cat> cat : map.entrySet()) {
             String key = cat.getKey();
             Cat value = cat.getValue();
             System.out.println(key + " - " + value.getName());
         }
-
     }
 
     static class Cat {
