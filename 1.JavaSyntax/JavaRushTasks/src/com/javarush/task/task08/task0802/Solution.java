@@ -22,9 +22,13 @@ public class Solution {
         System.out.println("================================================");
         System.out.println("Использование for-each цикла с entrySet():");
         System.out.println("================================================");
+
         for (Map.Entry<String, String> entry : plants.entrySet()) {
+            // Получаем ключ (название растения) из текущей записи.
             String key = entry.getKey();
+            // Получаем значение (категорию растения) из текущей записи.
             String value = entry.getValue();
+            // Выводим ключ и значение в формате "ключ: значение".
             System.out.println(key + ": " + value);
         }
 
