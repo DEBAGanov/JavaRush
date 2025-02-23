@@ -17,13 +17,14 @@ public class Solution {
 
     }
 
-    public static void fill(List<Object> list) {
+    public static List<Object> fill(List<Object> list) {
         for (int i = 0; i < 10000; i++) {
             list.add(i, new Object());
         }
+        return list;
     }
 
-    public static void get10000(List<Object> list) {
+    public static void get10000(List<Object> list) { // Добавлен тип возвращаемого значения void
         for (int i = 0; i < 10000; i++) {
             list.get(i);
         }
