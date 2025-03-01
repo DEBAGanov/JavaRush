@@ -17,7 +17,6 @@ public class Solution {
         printRemainingPeople(map); // Выводим оставшихся людей
     }
 
-    // Метод для создания словаря
     public static Map<String, Date> createMap() {
         Map<String, Date> map = new HashMap<>();
         map.put("Иванов", new Date(90, Calendar.JANUARY, 1));
@@ -33,7 +32,6 @@ public class Solution {
         return map;
     }
 
-    // Метод для удаления людей, родившихся летом
     public static void removeAllSummerPeople(Map<String, Date> map) {
         Iterator<Map.Entry<String, Date>> iterator = map.entrySet().iterator();
         while (iterator.hasNext()) {
@@ -42,7 +40,6 @@ public class Solution {
             Calendar calendar = Calendar.getInstance();
             calendar.setTime(birthDate);
             int month = calendar.get(Calendar.MONTH);
-            // Удаляем людей, родившихся в июне, июле и августе
             if (month == Calendar.JUNE || month == Calendar.JULY || month == Calendar.AUGUST) {
                 iterator.remove();
             }
