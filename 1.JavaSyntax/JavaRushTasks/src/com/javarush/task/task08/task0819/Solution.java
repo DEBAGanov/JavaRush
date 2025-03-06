@@ -8,7 +8,6 @@ public class Solution {
     public static void main(String[] args) {
         Set<Cat> cats = createCats();
 
-        // Удаляем одного кота из множества
         if (!cats.isEmpty()) {
             cats.remove(cats.iterator().next());
         }
