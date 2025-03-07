@@ -1,17 +1,19 @@
 package com.javarush.task.task08.task0820;
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class Solution {
     public static void main(String[] args) {
         Set<Cat> cats = createCats();
         Set<Dog> dogs = createDogs();
         Set<Object> pets = join(cats, dogs);
+        System.out.println("All pets:");
+        printPets(pets);
         removeCats(pets, cats);
+        System.out.println("Pets after removing cats:");
         printPets(pets);
-        printCats(cats);
-        printDogs(dogs);
-        printPets(pets);
+
     }
 
     public static Set<Cat> createCats() {
@@ -24,11 +26,10 @@ public class Solution {
     }
 
     public static Set<Dog> createDogs() {
-        Set<Cat> dogs = new HashSet<>();
-        cats.add(new Dog());
-        cats.add(new Dog());
-        cats.add(new Dog());
-        cats.add(new Dog());
+        Set<Dog> dogs = new HashSet<>();
+        dogs.add(new Dog());
+        dogs.add(new Dog());
+        dogs.add(new Dog());
         return dogs;
     }
 
@@ -37,18 +38,6 @@ public class Solution {
         pets.addAll(cats);
         pets.addAll(dogs);
         return pets;
-    }
-
-    public static void printCats(Set<Cat> cats) {
-        for (Cat cat : cats) {
-            System.out.println(cat);
-        }
-    }
-
-    public static void printDogs(Set<Dog> dogs) {
-        for (Dog dog : dogs) {
-            System.out.println(dog);
-        }
     }
 
     public static void printPets(Set<Object> pets) {
@@ -61,12 +50,18 @@ public class Solution {
         pets.removeAll(cats);
     }
 
-    public class Cat {
-
+    public static class Cat {
+        @Override
+        public String toString() {
+            return "Cat";
+        }
     }
 
-    public class Dog {
-
+    public static class Dog {
+        @Override
+        public String toString() {
+            return "Dog";
+        }
     }
 
 }
